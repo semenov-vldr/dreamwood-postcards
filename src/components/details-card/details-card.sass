@@ -93,3 +93,24 @@
     object-fit: cover
     @media (max-width: $width-mobile)
       width: 50px
+
+
+.copy-link
+  position: relative
+
+  .copy-link-alert
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translate(-50%, 120%)
+    width: fit-content
+    padding: 8px
+    background-color: #fff
+    border-radius: 8px
+    border: 1px solid currentColor
+    color: $coral
+    font-size: 16px
+    z-index: 1
+    @media (max-width: 480px)
+      font-size: 12px
+
