@@ -1,0 +1,125 @@
+.footer
+  border-top: 1px dashed #B1B1B1
+
+  &__content
+    padding: 90px 160px 140px 0
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 72px 32px
+    justify-content: space-between
+
+    @media (max-width: 1600px)
+      padding-right: 120px
+    @media (max-width: 1400px)
+      padding: 90px 60px 100px 0
+    @media (max-width: $width-tablet)
+      padding-right: 32px
+      grid-template-columns: repeat(3, 1fr)
+    & > *
+      margin: 0 auto
+      text-align: center
+    @media (max-width: $width-mobile)
+      gap: 48px 24px
+      padding-right: 24px
+    @media (max-width: 600px)
+      grid-template-columns: 1fr
+    @media (max-width: 480px)
+      gap: 32px
+      padding: 56px 0
+
+  &__logo img
+    width: 260px
+    @media (max-width: $width-tablet)
+      width: 250px
+    @media (max-width: $width-mobile)
+      width: 200px
+    @media (max-width: 650px)
+      width: 180px
+
+  &__social
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      width: 78px
+      @media (max-width: $width-tablet)
+        width: 60px
+      @media (max-width: $width-mobile)
+        width: 50px
+      @media (max-width: 600px)
+        grid-column: 1 / -1
+        grid-row: 2/3
+
+
+  &__tel
+    position: relative
+    grid-column: 3/4
+    display: flex
+    align-items: center
+    gap: 14px
+    font-size: 24px
+    font-weight: 500
+    white-space: nowrap
+    &::before
+      content: ""
+      display: inline-block
+      background-image: url('../img/icons/phone.svg')
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
+      width: 26px
+      height: 26px
+      aspect-ratio: 1 / 1
+    @media (max-width: 1400px)
+      font-size: 20px
+    @media (max-width: $width-tablet)
+      font-size: 18px
+    @media (max-width: $width-mobile)
+      font-size: 16px
+      &::before
+        width: 20px
+        height: 20px
+    @media (max-width: 600px)
+      grid-column: 1 / -1
+      grid-row: 3/4
+
+
+  &__link
+    color: $grey
+    font-size: 24px
+    font-weight: 500
+    white-space: nowrap
+    @media (max-width: 1400px)
+      font-size: 20px
+    @media (max-width: $width-tablet)
+      font-size: 18px
+    @media (max-width: $width-mobile)
+      font-size: 16px
+
+    &--rules
+      grid-column: 2/3
+      grid-row: 2/3
+      @media (max-width: 600px)
+        grid-column: 1 / -1
+        grid-row: 4/5
+
+    &--agreement
+      grid-column: 3/4
+      grid-row: 2/3
+      @media (max-width: $width-tablet)
+        grid-column: 2/3
+        grid-row: 3/4
+      @media (max-width: 600px)
+        grid-column: 1 / -1
+        grid-row: 5/6
+
+    &--politics
+      grid-column: 4/5
+      grid-row: 2/3
+      @media (max-width: $width-tablet)
+        grid-column: 2/3
+        grid-row: 4/5
+      @media (max-width: 600px)
+        grid-column: 1 / -1
+        grid-row: 6/7
+

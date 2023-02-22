@@ -1,0 +1,95 @@
+.details-card
+  padding-bottom: 100px
+  @media (min-width: $width-tablet)
+    background-image: url('../img/decor-details-card.svg')
+    background-size: 40% auto
+    background-position: left bottom 35%
+    background-repeat: no-repeat
+    @media (max-width: 1300px)
+      background-position: left bottom 20%
+      background-size: 30% auto
+    @media (max-width: 480px)
+      padding-bottom: 56px
+
+  &__container
+    display: grid
+    grid-template-columns: 360px auto
+    gap: 72px
+    justify-content: right
+    @media (max-width: $width-tablet)
+      grid-template-columns: 1fr
+    @media (max-width: 480px)
+      gap: 48px
+
+  &__card
+    max-width: 880px
+    width: 100%
+    height: auto
+    object-fit: cover
+
+  &__feedback
+    display: flex
+    flex-direction: column
+    gap: 72px
+    &-title
+      max-width: 270px
+      @media (max-width: $width-mobile)
+        max-width: 200px
+      @media (max-width: 480px)
+        max-width: 160px
+    @media (max-width: $width-tablet)
+      display: grid
+      grid-template-columns: auto auto
+    @media (max-width: $width-mobile)
+      grid-template-columns: 1fr
+      justify-content: center
+      & > *
+        margin: 0 auto
+    @media (max-width: 480px)
+      gap: 48px
+
+  &__buttons
+    display: flex
+    flex-direction: column
+    gap: 8px
+    width: fit-content
+
+  &__feedback-btn
+    background-color: $coral
+    padding: 8px 16px
+    color: #fff
+    border-radius: 30px
+    @include fontSize(16, 24)
+    display: flex
+    align-items: center
+    white-space: nowrap
+    gap: 12px
+    cursor: pointer
+    @media (max-width: $width-mobile)
+      padding: 4px 12px
+    svg
+      width: 28px
+      height: 28px
+      @media (max-width: $width-mobile)
+        width: 20px
+        height: 20px
+    svg path
+      fill: #fff
+    &:hover
+      opacity: 0.8
+
+  &__social-list
+    display: flex
+    align-items: center
+    gap: 16px
+    @media (max-width: $width-tablet)
+      grid-column: 2/3
+    @media (max-width: $width-mobile)
+      grid-column: 1/-1
+      justify-content: center
+
+  .social__icon
+    width: 65px
+    object-fit: cover
+    @media (max-width: $width-mobile)
+      width: 50px

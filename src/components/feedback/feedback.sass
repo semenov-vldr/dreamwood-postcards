@@ -1,0 +1,88 @@
+.feedback
+  background-color: #fff
+
+  &__container
+    display: flex
+    column-gap: 100px
+    justify-content: center
+    align-items: start
+    padding: 170px 0 100px
+    @media (max-width: $width-tablet)
+      column-gap: 48px
+      justify-content: space-between
+    @media (max-width: $width-mobile)
+      flex-direction: column
+      //align-items: center
+      padding: 80px 0
+      gap: 48px
+    @media (max-width: 480px)
+      padding: 48px 0
+
+  &__title
+    width: 343px
+    @media (max-width: $width-tablet)
+      width: clamp(170px, calc(170px + (300 - 170) * ((100vw - 320px) / (1080 - 320))), 300px)
+
+  &__content
+    width: 100%
+    max-width: 520px
+    p
+      font-weight: 600
+      @include fontSize(22, 36)
+      line-height: 1.06
+      color: $blue
+      &:not(:last-child)
+        margin-bottom: 18px
+    @media (max-width: $width-tablet)
+      max-width: 460px
+    span
+      position: relative
+      color: $coral
+      font-size: 18px
+      padding: 4px 8px
+      border: 1px solid currentColor
+      border-radius: 20px
+      display: inline-flex
+      gap: 8px
+      align-items: center
+      justify-content: center
+      vertical-align: middle
+      margin-left: 8px
+      &::before
+        content: ""
+        display: inline-block
+        background-image: url('../img/icons/scissors.svg')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        width: 16px
+        height: 16px
+        @media (max-width: $width-mobile)
+          width: 14px
+          height: 14px
+      @media (max-width: $width-mobile)
+        font-size: 16px
+      @media (max-width: 480px)
+        font-size: 14px
+
+
+  &__link
+    white-space: nowrap
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    gap: 8px
+    margin-top: 80px
+    color: #fff
+    background-color: $coral
+    padding: 6px 16px
+    border-radius: 30px
+    font-size: 28px
+    font-weight: 500
+    @include fontSize(18, 28)
+    img
+      height: 90%
+      object-fit: cover
+    @media (max-width: $width-mobile)
+      margin-top: 40px
+

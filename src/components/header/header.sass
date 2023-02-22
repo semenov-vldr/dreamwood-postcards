@@ -1,0 +1,113 @@
+.header
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  width: 100%
+  height: 600px
+  overflow-x: hidden
+  overflow-y: initial
+  @media (max-width: 600px)
+    height: 550px
+  @media (max-width: 480px)
+    height: 480px
+
+  &__container
+    position: relative
+    display: flex
+    padding-top: 110px
+    @media (max-width: $width-tablet)
+      padding-top: 67px
+    @media (max-width: $width-mobile)
+      padding-top: 48px
+    @media (max-width: 480px)
+      padding-top: 32px
+
+  &__logo img
+    width: 340px
+    @media (max-width: $width-tablet)
+      width: clamp(130px, calc(130px + (320 - 130) * ((100vw - 320px) / (1080 - 320))), 320px)
+
+
+  &__decor-sun
+    position: absolute
+    object-fit: cover
+    right: 1px
+    top: 1px
+    transform: translateY(-52%)
+    @media (max-width: 1300px)
+      transform: translate(65%, -47%) rotate(106deg)
+      width: 350px
+    @media (max-width: $width-tablet)
+      width: 300px
+    @media (max-width: 480px)
+      width: 250px
+    @media (max-width: 400px)
+      width: 200px
+
+  &__decor-seal
+    position: absolute
+    object-fit: cover
+    left: 1px
+    top: 300px
+    @media (max-width: 1600px)
+      width: 300px
+    @media (max-width: $width-tablet)
+      width: clamp(130px, calc(130px + (270 - 130) * ((100vw - 320px) / (1080 - 320))), 270px)
+    @media (max-width: 900px)
+      top: 250px
+    @media (max-width: 600px)
+      top: 160px
+    @media (max-width: 480px)
+      top: 120px
+
+  &__decor-text
+    position: absolute
+    right: 230px
+    top: 30px
+    @media (max-width: 1600px)
+      top: 120px
+      right: 160px
+    @media (max-width: 1200px)
+      right: 50px
+    @media (max-width: $width-tablet)
+      right: 30px
+    @media (max-width: 600px)
+      top: 290px
+      left: 0
+      right: 0
+      margin: 0 auto
+      width: fit-content
+    @media (max-width: 480px)
+      top: 210px
+
+  &__decor-postcards-text
+    object-fit: cover
+    margin-bottom: 70px
+    @media (max-width: 1600px)
+      width: 500px
+    @media (max-width: $width-tablet)
+      width: 480px
+      margin-bottom: 60px
+    @media (max-width: 900px)
+      width: 380px
+    @media (max-width: $width-mobile)
+      width: 300px
+      margin-bottom: 40px
+    @media (max-width: 600px)
+      margin-bottom: 32px
+    @media (max-width: 480px)
+      width: 250px
+      margin-bottom: 24px
+    @media (max-width: 400px)
+      width: 200px
+
+  &__text
+    color: $blue
+    line-height: 1.06
+    font-weight: 600
+    margin-left: 50px
+    @include fontSize(18, 36)
+    @media (max-width: $width-mobile)
+      margin-left: 20px
+

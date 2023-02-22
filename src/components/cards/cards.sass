@@ -1,0 +1,39 @@
+main
+  background-image: url("../img/decor-top-main.svg")
+  background-repeat: no-repeat
+  background-size: 68% auto
+
+.cards
+  //padding-top: 750px
+  padding-bottom: 172px
+  //background-image: url("../img/decor-top-main.svg")
+  //background-repeat: no-repeat
+  //background-size: 68% auto
+  @media (max-width: $width-tablet)
+    //padding-top: 650px
+    padding-bottom: 56px
+  @media (max-width: $width-mobile)
+    //padding-top: 600px
+    padding-bottom: 48px
+  @media (max-width: 480px)
+    //padding-top: 460px
+
+
+  &__list
+    display: grid
+    justify-content: center
+    grid-template-columns: repeat(4, 1fr)
+    gap: 40px
+    @media (max-width: $width-tablet)
+      grid-template-columns: repeat(2, 1fr)
+    @media (max-width: $width-mobile)
+      gap: 20px
+
+  &__item img
+    width: 100%
+    max-width: 420px
+    height: auto
+    object-fit: cover
+    transition: 0.5s
+    &:hover
+      transform: scale(1.02)
