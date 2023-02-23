@@ -49,13 +49,15 @@
     position: absolute
     object-fit: cover
     left: 1px
-    top: 300px
+    top: 260px
     @media (max-width: 1600px)
       width: 300px
     @media (max-width: $width-tablet)
       width: clamp(130px, calc(130px + (270 - 130) * ((100vw - 320px) / (1080 - 320))), 270px)
     @media (max-width: 900px)
-      top: 250px
+      top: 230px
+    @media (max-width: $width-mobile)
+      top: 210px
     @media (max-width: 600px)
       top: 160px
     @media (max-width: 480px)
@@ -66,7 +68,7 @@
     right: 230px
     top: 30px
     @media (max-width: 1600px)
-      top: 120px
+      top: 140px
       right: 160px
     @media (max-width: 1200px)
       right: 50px
