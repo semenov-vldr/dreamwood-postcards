@@ -46,10 +46,10 @@ if (socialList) {
   const link_vk = socialList.querySelector('.social__link--vk');
   const link_ok = socialList.querySelector('.social__link--ok');
 
-  link_telegram.href = `${url_telegram + address}`;
-  link_viber.href = `${url_viber + address}`;
-  link_vk.href = `${url_vk + address}`;
-  link_ok.href = `${url_ok + address}`;
+  if (link_telegram) link_telegram.href = `${url_telegram + address}`;
+  if (link_viber) link_viber.href = `${url_viber + address}`;
+  if (link_vk) link_vk.href = `${url_vk + address}`;
+  if (link_ok) link_ok.href = `${url_ok + address}`;
 
 }
 
