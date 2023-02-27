@@ -5,11 +5,13 @@
     background-size: 40% auto
     background-position: left bottom 35%
     background-repeat: no-repeat
-    @media (max-width: 1300px)
-      background-position: left bottom 20%
-      background-size: 30% auto
-    @media (max-width: 480px)
-      padding-bottom: 56px
+  @media (max-width: 1300px)
+    background-position: left bottom 20%
+    background-size: 30% auto
+  @media (max-width: 480px)
+    padding-bottom: 56px
+    position: relative
+    z-index: 2
 
   &__container
     display: grid
@@ -20,6 +22,8 @@
       grid-template-columns: 1fr
     @media (max-width: 480px)
       gap: 48px
+    @media (max-width: 400px)
+      gap: 32px
 
   &__card
     display: block
@@ -39,14 +43,13 @@
       gap: 56px 40px
       grid-template-columns: 1fr 1fr
     @media (max-width: 600px)
-      grid-template-columns: 1fr
-      justify-content: center
-      & > *
-        margin: 0 auto
-    @media (max-width: 480px)
-      gap: 48px
+      gap: 40px 24px
     @media (max-width: 400px)
-      gap: 32px
+      //grid-template-columns: 1fr
+      gap: 24px
+      //& > *
+      //  margin: 0 auto
+
 
   &__feedback-title
     max-width: 270px
@@ -57,11 +60,12 @@
       top: 390px
     @media (max-width: $width-mobile)
       top: 335px
-      max-width: 200px
+      max-width: 230px
+      width: 30%
     @media (max-width: 600px)
-      position: static
-    @media (max-width: 480px)
-      max-width: 160px
+      top: clamp(250px, calc(250px + (340 - 250) * ((100vw - 320px) / (600 - 320))), 340px)
+
+
 
   &__buttons
     display: flex
@@ -75,8 +79,13 @@
       grid-column: 1/-1
       gap: 40px
     @media (max-width: 600px)
-      grid-template-columns: 1fr
       gap: 24px
+    @media (max-width: 480px)
+      gap: 16px
+    //@media (max-width: 400px)
+    //  grid-template-columns: 1fr
+    //  width: fit-content
+    //  justify-self: center
 
   &__feedback-btn
     background-color: $coral
@@ -96,6 +105,13 @@
         margin-right: auto
     @media (max-width: $width-mobile)
       padding: 8px 12px
+    @media (max-width: 480px)
+      font-size: 12px
+    @media (max-width: 400px)
+      gap: 8px
+      font-size: 10px
+    @media (max-width: 360px)
+      padding: 8px
     svg
       width: 28px
       height: 28px
@@ -104,6 +120,12 @@
       @media (max-width: $width-mobile)
         width: 20px
         height: 20px
+      @media (max-width: 400px)
+        width: 15px
+        height: 15px
+      @media (max-width: 360px)
+        width: 13px
+        height: 13px
     svg path
       fill: #fff
     &:hover
@@ -115,8 +137,8 @@
     gap: 16px
     @media (max-width: $width-tablet)
       grid-column: 1/2
-    @media (max-width: $width-mobile)
-
+    @media (max-width: 400px)
+      gap: 8px
   .social__icon
     width: 65px
     object-fit: cover
@@ -124,6 +146,11 @@
       width: 50px
     @media (max-width: 600px)
       width: 45px
+    @media (max-width: 480px)
+      width: 35px
+    @media (max-width: 400px)
+      width: 30px
+
 
 
 .copy-link
@@ -141,7 +168,7 @@
     border: 1px solid currentColor
     color: $coral
     font-size: 16px
-    z-index: 1
+    z-index: 2
     @media (max-width: 480px)
       font-size: 12px
 
@@ -168,7 +195,12 @@
     @media (max-width: 600px)
       width: 50px
       height: 50px
+    @media (max-width: 400px)
+      width: 35px
+      height: 35px
   &:hover
     opacity: 0.8
   @media (max-width: 600px)
     font-size: 20px
+  @media (max-width: 400px)
+    gap: 8px

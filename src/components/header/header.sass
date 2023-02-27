@@ -7,10 +7,12 @@
   height: 600px
   overflow-x: hidden
   overflow-y: initial
-  @media (max-width: 600px)
-    height: 550px
+  @media (max-width: $width-mobile)
+    height: 450px
   @media (max-width: 480px)
-    height: 480px
+    height: 370px
+  @media (max-width: 400px)
+    height: 330px
 
   &__container
     position: relative
@@ -26,7 +28,7 @@
   &__logo img
     width: 340px
     @media (max-width: $width-tablet)
-      width: clamp(130px, calc(130px + (320 - 130) * ((100vw - 320px) / (1080 - 320))), 320px)
+      width: clamp(160px, calc(160px + (320 - 160) * ((100vw - 320px) / (1080 - 320))), 320px)
 
 
   &__decor-sun
@@ -59,9 +61,14 @@
     @media (max-width: $width-mobile)
       top: 210px
     @media (max-width: 600px)
-      top: 160px
+      width: 30%
+      top: 170%
     @media (max-width: 480px)
-      top: 120px
+      width: 35%
+    //@media (max-width: 600px)
+    //  top: 160px
+    //@media (max-width: 480px)
+    //  top: 120px
 
   &__decor-text
     position: absolute
@@ -75,13 +82,19 @@
     @media (max-width: $width-tablet)
       right: 30px
     @media (max-width: 600px)
-      top: 290px
-      left: 0
+      width: 55%
+      top: 120%
       right: 0
-      margin: 0 auto
-      width: fit-content
     @media (max-width: 480px)
-      top: 210px
+      width: 60%
+    //@media (max-width: 600px)
+    //  top: 290px
+    //  left: 0
+    //  right: 0
+    //  margin: 0 auto
+    //  width: fit-content
+    //@media (max-width: 480px)
+    //  top: 210px
 
   &__decor-postcards-text
     object-fit: cover
@@ -97,12 +110,16 @@
       width: 300px
       margin-bottom: 40px
     @media (max-width: 600px)
-      margin-bottom: 32px
-    @media (max-width: 480px)
-      width: 250px
+      width: 100%
       margin-bottom: 24px
-    @media (max-width: 400px)
-      width: 200px
+
+    //@media (max-width: 600px)
+    //  margin-bottom: 32px
+    //@media (max-width: 480px)
+    //  width: 250px
+    //  margin-bottom: 24px
+    //@media (max-width: 400px)
+    //  width: 200px
 
   &__text
     color: $blue
@@ -112,4 +129,6 @@
     @include fontSize(18, 36)
     @media (max-width: $width-mobile)
       margin-left: 20px
+    @media (max-width: 600px)
+      font-size: 16px
 
